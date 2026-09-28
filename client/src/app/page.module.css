@@ -1,0 +1,187 @@
+.page {
+  --background: #fafafa;
+  --foreground: #fff;
+  --text-primary: #000;
+  --text-secondary: #666;
+  --border: #ebebeb;
+  --accent: #000;
+  --accent-hover: #383838;
+
+  display: flex;
+  min-height: 100dvh;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--font-geist-sans);
+  background-color: var(--background);
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  max-width: 640px;
+  flex-direction: column;
+  gap: 16px;
+  padding: 80px 24px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: -1.6px;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.createForm {
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.rateLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.rateInput {
+  width: 80px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  background: var(--foreground);
+  color: var(--text-primary);
+}
+
+.input {
+  flex: 1;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  font-size: 15px;
+  background: var(--foreground);
+  color: var(--text-primary);
+}
+
+.primaryButton {
+  padding: 10px 18px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent);
+  color: var(--background);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.primaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.primaryButton:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.secondaryButton {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--foreground);
+  color: var(--text-primary);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.secondaryButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.linkButton {
+  border: none;
+  background: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  text-decoration: underline;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 14px;
+}
+
+.roomListHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-top: 16px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.roomList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 420px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.roomRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--foreground);
+}
+
+.roomInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.roomName {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.roomMeta {
+  font-size: 13px;
+  color: var(--text-secondary);
+  text-transform: capitalize;
+}
+
+.empty {
+  color: var(--text-secondary);
+  padding: 24px 0;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .page {
+    --background: #0a0a0a;
+    --foreground: #111;
+    --text-primary: #ededed;
+    --text-secondary: #999;
+    --border: #262626;
+    --accent: #ededed;
+    --accent-hover: #ccc;
+  }
+
+  .primaryButton {
+    color: #000;
+  }
+}
